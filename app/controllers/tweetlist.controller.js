@@ -30,7 +30,7 @@ exports.tweetlist = async (req, res, next) => {
       //startAt: 1,
       orderBy: [['temp_timestamp', 'desc']],
       where: [['$ownerId', '==', vendorIdentityId]],
-      //limit: 10,
+      limit: 10,
     };
     const forUsername = req.params.name;
     debug(`req.params.user: ${forUsername}`);

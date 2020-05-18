@@ -32,6 +32,9 @@
 
 
 //textfield
+
+@include button.core-styles;
+
 @include textfield.core-styles;
 
 @include icon-button.core-styles;

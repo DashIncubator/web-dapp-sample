@@ -27,8 +27,9 @@ exports.userlist = async (req, res, next) => {
     debug(`getting signed up user list`);
 
     const userQuery = {
+      orderBy: [['temp_timestamp', 'desc']],
       where: [['$ownerId', '==', vendorIdentityId]],
-      startAt: 1,
+      limit: 10,
     };
 
     const userlistConnection = new DashConnection(

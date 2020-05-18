@@ -95,49 +95,7 @@
     }
 
 
-    async function fetchTweets() {
-      console.log('fetch tweets');
-      fetch("./api/v1/tweets")
-        .then(response => {
-          return response.text()
-        })
-        .then(data => {
-          console.log('got results');
-          console.dir(JSON.parse(data).success.data);
-          var template = $.templates("#tweetcardTemplate");
-          var htmlOutput = template.render(JSON.parse(data).success.data);
-          $("#tweets").html(htmlOutput);
-
-        })
-        .catch(error => {
-          console.log('error fetching tweets');
-          createSnackbar('error fetching signups', 'Retry?', function () { fetchTweets() });
-
-        });
-    }
-
-
-    async function fetchSignups() {
-      console.log('fetch signups');
-      fetch("./api/v1/signups")
-        .then(response => {
-          return response.text()
-        })
-        .then(data => {
-          console.log('got results');
-          console.dir(JSON.parse(data).success.data);
-          var template = $.templates("#usercardTemplate");
-          var htmlOutput = template.render(JSON.parse(data).success.data);
-          $("#signups").html(htmlOutput);
-
-        })
-        .catch(error => {
-          console.log('error fetching signups');
-          createSnackbar('error fetching signups', 'Retry?', function () { fetchSignups() });
-
-        });
-
-    }
+    
 
     $(document).ready(function () {
 
@@ -168,6 +126,53 @@
               document.querySelector('.mdc-text-field'),
             );
       */
+
+      const fetchTweets = async function () {
+      console.log('fetch tweets');
+      fetch("./api/v1/tweets")
+        .then(response => {
+          return response.text()
+        })
+        .then(data => {
+          console.log('got results');
+          console.dir(JSON.parse(data).success.data);
+          var template = $.templates("#tweetcardTemplate");
+          var htmlOutput = template.render(JSON.parse(data).success.data);
+          $("#tweets").html(htmlOutput);
+
+        })
+        .catch(error => {
+          console.log('error fetching tweets');
+          createSnackbar('error fetching signups', 'Retry?', function () { fetchTweets() });
+
+        });
+    }
+
+
+    const fetchSignups = async function () {
+      console.log('fetch signups');
+      fetch("./api/v1/signups")
+        .then(response => {
+          return response.text()
+        })
+        .then(data => {
+          console.log('got results');
+          console.dir(JSON.parse(data).success.data);
+          var template = $.templates("#usercardTemplate");
+          var htmlOutput = template.render(JSON.parse(data).success.data);
+          $("#signups").html(htmlOutput);
+
+        })
+        .catch(error => {
+          console.log('error fetching signups');
+          createSnackbar('error fetching signups', 'Retry?', function () { fetchSignups() });
+
+        });
+
+    }
+
+
+
       //fetch tweets
       fetchTweets();
 
@@ -181,6 +186,8 @@
       var pageLogin = "/login-request";
       var pageTweet = "/tweet-request";
 
+      $("#refresh-signups").click( async function () {fetchSignups()});
+      $("#refresh-tweets").click( async function () {fetchTweets()});
 
       $("#signup").click(async function () {
         $('#progress').show()
@@ -410,24 +417,31 @@
               <!--SIGNUP-->
               <div class="content content--active">
                 <div>
-                  <button id="signup" class="mdc-theme-primary mdc-button">
+                  <button id="signup" class="mdc-theme-primary mdc-button  mdc-button--raised">
                     <div class="mdc-button__ripple"></div>
                     <span class="mdc-button__label">Sign Up</span>
                   </button>
                 </div>
 
                 <br /><br />
-                <h2>Signed up users</h2>
+                <h2>Recent signups</h2>
                 <p>A list of signed up users</p>
+                <div>
+                  <button id="refresh-signups" class="mdc-theme-primary mdc-button">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">Refresh</span>
+                  </button>
+                </div>
+                <br/>
 
                 <div id="signups" style="display: inline-block;text-align: left;">
-
+                    Loading...
                 </div>
               </div>
               <div class="content">
                 <!--LOGIN-->
                 <div>
-                  <button id="login" class="mdc-theme-primary mdc-button">
+                  <button id="login" class="mdc-theme-primary mdc-button  mdc-button--raised">
                     <div class="mdc-button__ripple"></div>
                     <span class="mdc-button__label">Login</span>
                   </button>
@@ -463,14 +477,22 @@
                 </div>
                 <br />
                 <div>
-                  <button id="tweet" class="mdc-theme-primary mdc-button">
+                  <button id="tweet" class="mdc-theme-primary mdc-button mdc-button--raised">
                     <div class="mdc-button__ripple"></div>
                     <span class="mdc-button__label">Tweet</span>
                   </button>
                 </div>
-                <h2>Tweets</h2>
+                <h2>Recent Tweets</h2>
                 <p>A list of tweets</p>
-                <div id="tweets" style="display: inline-block;text-align: left;"></div>
+                <div>
+                  <button id="refresh-tweets" class="mdc-theme-primary mdc-button">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">Refresh</span>
+                  </button>
+                </div>
+                <br/>
+                <div id="tweets" style="display: inline-block;text-align: left;">Loading...</div>
+                
               </div>
               <!--output-->
               <div>
