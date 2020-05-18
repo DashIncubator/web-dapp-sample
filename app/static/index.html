@@ -201,7 +201,7 @@
         catch (e) {
           //$('pre').html('Error: ' + JSON.stringify(e));
           console.log('Error signing up:' + JSON.stringify(e));
-          createSnackbar('Error signing up:' + e.responseText, 'Dismiss');
+          createSnackbar('Error signing up:' + e.responseText || e.statusText, 'Dismiss');
         }
 
       });
@@ -218,11 +218,11 @@
           const resultLogin = await doAuth(URL, pin);
           console.log(resultLogin);
           createSnackbar('Sucessfully logged in!', 'Dismiss');
-          $('pre').html(JSON.stringify(resultLogin));
+          //$('pre').html(JSON.stringify(resultLogin));
         }
         catch (e) {
           //$('pre').html('Error: ' + JSON.stringify(e));
-          createSnackbar('Error submitting logging in :' + e.responseText, 'Dismiss');
+          createSnackbar('Error submitting logging in :' + e.responseText || e.statusText, 'Dismiss');
         }
 
       });
@@ -245,7 +245,7 @@
         catch (e) {
           //$('pre').html('Error: ' + JSON.stringify(e));
           console.log('tweet error', JSON.stringify(e))
-          createSnackbar('Error submitting tweet:' + e.responseText, 'Retry?', function () { $("#tweet").click() });
+          createSnackbar('Error submitting tweet:' + e.responseText || e.statusText, 'Retry?', function () { $("#tweet").click() });
         }
 
       });
