@@ -1,6 +1,6 @@
 {
   "name": "web-dapp-sample",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Basic demo for using user auth in Dash dapp",
   "main": "app/server.js",
   "scripts": {
