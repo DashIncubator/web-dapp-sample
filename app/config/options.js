@@ -8,7 +8,7 @@ exports.options = {
         contractId: '7PBvxeGpj7SsWfvDSa31uqEMt58LAiJww7zNcVRP1uEM',
       },
       tweetContract: {
-        contractId: '93LiKCGEszXfEk6jZ4ZF238v6YzruXVY4NF4v5Em8JhN',
+        contractId: '7zU12eKXC7P8mnPQVA8W9cDk5UBLnMePmKshQQJJYeBn',
       },
     },
     network: 'testnet',

@@ -11,7 +11,7 @@ const vendorIdentityId =
 
 // TODO: move contract id to .env
 const TweetContractId =
-  '93LiKCGEszXfEk6jZ4ZF238v6YzruXVY4NF4v5Em8JhN';
+  '7zU12eKXC7P8mnPQVA8W9cDk5UBLnMePmKshQQJJYeBn';
 
 // TODO: dontl realy need to pass the auth options
 const Options = require('../config/options');
