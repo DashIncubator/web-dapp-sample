@@ -5,13 +5,13 @@ const TweetDocument = require('../models/tweetDocument.model');
 
 // TODO: move vendor details to .env
 const vendorMnemonic =
-  'uniform analyst paper father soldier toe lesson fetch exhaust jazz swim response';
+  'erosion chalk panda one embrace absurd punch fitness congress cave true fine';
 const vendorIdentityId =
-  'CheZBPQHztvLNqN67i4KxcTU1XmDz7qG85X1XeJbc7K5';
+  '6st5GyAzz1jZuLbroUk3JWR8H1mzscZ3TcVjCKViGcPh';
 
 // TODO: move contract id to .env
 const TweetContractId =
-  'E6WpKfNs4QYAr2vQ7HrTSKLUZo5szsg41bJhEBZKWGck';
+  '93LiKCGEszXfEk6jZ4ZF238v6YzruXVY4NF4v5Em8JhN';
 
 // TODO: dontl realy need to pass the auth options
 const Options = require('../config/options');
