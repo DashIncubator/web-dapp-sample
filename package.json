@@ -1,6 +1,6 @@
 {
   "name": "web-dapp-sample",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Basic demo for using user auth in Dash dapp",
   "main": "app/server.js",
   "scripts": {
@@ -40,8 +40,8 @@
     "body-parser": "^1.19.0",
     "connect-redis": "^4.0.4",
     "dash": "^3.0.2",
-    "dashmachine-auth-request": "^0.3.1",
-    "dashmachine-crypto": "^0.4.0",
+    "dashmachine-auth-request": "0.5.0",
+    "dashmachine-crypto": "0.5.0",
     "dotenv": "^8.2.0",
     "esm": "^3.2.25",
     "express": "^4.17.1",

@@ -11,15 +11,15 @@ const Tweet = require('../models/tweet.model');
 const tempDappName = 'Web dApp Sample';
 
 const vendorMnemonic =
-  'uniform analyst paper father soldier toe lesson fetch exhaust jazz swim response';
+  'erosion chalk panda one embrace absurd punch fitness congress cave true fine';
 const vendorUsername = 'alice';
-const vendorUserId = 'Aobc5KKaA4ZqzP7unc6WawQXQEK2S3y6EwrmvJLLn1ui';
+const vendorUserId = '2JwFfLfCk8m139U778HzLA315s8BDXEBARyWEbEnrdbs';
 const vendorIdenityId =
-  'CheZBPQHztvLNqN67i4KxcTU1XmDz7qG85X1XeJbc7K5';
+  '6st5GyAzz1jZuLbroUk3JWR8H1mzscZ3TcVjCKViGcPh';
 const vendorPublicKey =
-  'A0/qSE6tis4l6BtQlTXB2PHW+WV+Iy0rpF5hAvX8hDRz';
+  'Ag/YNnbAfG0IpNeH4pfMzgqIsgooR36s5MzzYJV76TpO';
 const vendorPrivateKey =
-  '40148175614f062fb0b4e5c519be7b6f57b872ebb55ea719376322fd12547bff';
+  '98cf6a9908bbc383e1a5564629d51eb8ae287fac0e9f01ab4390342ace306318';
 const vendorObj = {
   name: vendorUsername,
   id: vendorUserId,

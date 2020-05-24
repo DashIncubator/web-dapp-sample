@@ -38,6 +38,18 @@ const registerContract = async function () {
             properties: [{ temp_timestamp: 'asc' }],
             unique: false,
           },
+          {
+            properties: [{ temp_unixtime_str: 'desc' }],
+            unique: false,
+          },
+          {
+            properties: [{ temp_unixtime_num: 'desc' }],
+            unique: false,
+          },
+          {
+            properties: [{ temp_unixtime_int: 'desc' }],
+            unique: false,
+          },
         ],
         properties: {
           messageId: {
@@ -54,6 +66,15 @@ const registerContract = async function () {
           },
           temp_timestamp: {
             type: 'string',
+          },
+          temp_unixtime_str: {
+            type: 'string',
+          },
+          temp_unixtime_num: {
+            type: 'number',
+          },
+          temp_unixtime_int: {
+            type: 'integer',
           },
         },
         additionalProperties: false,
@@ -76,6 +97,18 @@ const registerContract = async function () {
             properties: [{ temp_timestamp: 'asc' }],
             unique: false,
           },
+          {
+            properties: [{ temp_unixtime_str: 'desc' }],
+            unique: false,
+          },
+          {
+            properties: [{ temp_unixtime_num: 'desc' }],
+            unique: false,
+          },
+          {
+            properties: [{ temp_unixtime_int: 'desc' }],
+            unique: false,
+          },
         ],
         properties: {
           username: {
@@ -86,6 +119,15 @@ const registerContract = async function () {
           },
           temp_timestamp: {
             type: 'string',
+          },
+          temp_unixtime_str: {
+            type: 'string',
+          },
+          temp_unixtime_num: {
+            type: 'number',
+          },
+          temp_unixtime_int: {
+            type: 'integer',
           },
         },
         additionalProperties: false,

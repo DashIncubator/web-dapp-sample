@@ -3,7 +3,19 @@ const Dash = require('dash');
 const clientOpts = {
   network: 'testnet',
   mnemonic:
-    'uniform analyst paper father soldier toe lesson fetch exhaust jazz swim response',
+    'erosion chalk panda one embrace absurd punch fitness congress cave true fine',
+    seeds: [
+      { service: 'seed-1.evonet.networks.dash.org' },
+      { service: 'seed-2.evonet.networks.dash.org' },
+      { service: 'seed-3.evonet.networks.dash.org' },
+      { service: 'seed-4.evonet.networks.dash.org' },
+      { service: 'seed-5.evonet.networks.dash.org' },
+     ],
+      apps: {
+         dpns: {
+            contractId: '7PBvxeGpj7SsWfvDSa31uqEMt58LAiJww7zNcVRP1uEM'
+         }
+      },
 };
 const client = new Dash.Client(clientOpts);
 
@@ -12,7 +24,7 @@ const registerContract = async function () {
     await client.isReady();
     const platform = client.platform;
     const identity = await platform.identities.get(
-      'CheZBPQHztvLNqN67i4KxcTU1XmDz7qG85X1XeJbc7K5',
+      '6st5GyAzz1jZuLbroUk3JWR8H1mzscZ3TcVjCKViGcPh',
     );
 
     const contractDocuments = {
@@ -30,6 +42,18 @@ const registerContract = async function () {
             properties: [{ temp_timestamp: 'asc' }],
             unique: true,
           },
+          {
+            properties: [{ temp_unixtime_str: 'desc' }],
+            unique: false,
+          },
+          {
+            properties: [{ temp_unixtime_num: 'desc' }],
+            unique: false,
+          },
+          {
+            properties: [{ temp_unixtime_int: 'desc' }],
+            unique: false,
+          },
         ],
         properties: {
           reference: {
@@ -45,6 +69,18 @@ const registerContract = async function () {
             type: 'string',
           },
           temp_dappname: {
+            type: 'string',
+          },
+          temp_unixtime_str: {
+            type: 'string',
+          },
+          temp_unixtime_num: {
+            type: 'number',
+          },
+          temp_unixtime_int: {
+            type: 'integer',
+          },
+          temp_vendoruid: {
             type: 'string',
           },
         },
@@ -64,6 +100,18 @@ const registerContract = async function () {
             properties: [{ temp_timestamp: 'asc' }],
             unique: true,
           },
+          {
+            properties: [{ temp_unixtime_str: 'desc' }],
+            unique: false,
+          },
+          {
+            properties: [{ temp_unixtime_num: 'desc' }],
+            unique: false,
+          },
+          {
+            properties: [{ temp_unixtime_int: 'desc' }],
+            unique: false,
+          },
         ],
         properties: {
           reference: {
@@ -78,6 +126,19 @@ const registerContract = async function () {
           temp_timestamp: {
             type: 'string',
           },
+          temp_unixtime_str: {
+            type: 'string',
+          },
+          temp_unixtime_num: {
+            type: 'number',
+          },
+          temp_unixtime_int: {
+            type: 'integer',
+          },
+          temp_vendoruid: {
+            type: 'string',
+          },
+          
         },
         additionalProperties: false,
       },
@@ -95,6 +156,18 @@ const registerContract = async function () {
             properties: [{ temp_timestamp: 'asc' }],
             unique: true,
           },
+          {
+            properties: [{ temp_unixtime_str: 'desc' }],
+            unique: false,
+          },
+          {
+            properties: [{ temp_unixtime_num: 'desc' }],
+            unique: false,
+          },
+          {
+            properties: [{ temp_unixtime_int: 'desc' }],
+            unique: false,
+          },
         ],
         properties: {
           reference: {
@@ -110,6 +183,18 @@ const registerContract = async function () {
             type: 'string',
           },
           temp_dappname: {
+            type: 'string',
+          },
+          temp_unixtime_str: {
+            type: 'string',
+          },
+          temp_unixtime_num: {
+            type: 'number',
+          },
+          temp_unixtime_int: {
+            type: 'integer',
+          },
+          temp_vendoruid: {
             type: 'string',
           },
         },
@@ -129,6 +214,18 @@ const registerContract = async function () {
             properties: [{ temp_timestamp: 'asc' }],
             unique: true,
           },
+          {
+            properties: [{ temp_unixtime_str: 'desc' }],
+            unique: false,
+          },
+          {
+            properties: [{ temp_unixtime_num: 'desc' }],
+            unique: false,
+          },
+          {
+            properties: [{ temp_unixtime_int: 'desc' }],
+            unique: false,
+          },
         ],
         properties: {
           reference: {
@@ -141,6 +238,18 @@ const registerContract = async function () {
             type: 'string',
           },
           temp_timestamp: {
+            type: 'string',
+          },
+          temp_unixtime_str: {
+            type: 'string',
+          },
+          temp_unixtime_num: {
+            type: 'number',
+          },
+          temp_unixtime_int: {
+            type: 'integer',
+          },
+          temp_vendoruid: {
             type: 'string',
           },
         },
@@ -159,6 +268,18 @@ const registerContract = async function () {
           {
             properties: [{ temp_timestamp: 'asc' }],
             unique: true,
+          },
+          {
+            properties: [{ temp_unixtime_str: 'desc' }],
+            unique: false,
+          },
+          {
+            properties: [{ temp_unixtime_num: 'desc' }],
+            unique: false,
+          },
+          {
+            properties: [{ temp_unixtime_int: 'desc' }],
+            unique: false,
           },
         ],
         properties: {
@@ -180,6 +301,18 @@ const registerContract = async function () {
           temp_dappname: {
             type: 'string',
           },
+          temp_unixtime_str: {
+            type: 'string',
+          },
+          temp_unixtime_num: {
+            type: 'number',
+          },
+          temp_unixtime_int: {
+            type: 'integer',
+          },
+          temp_vendoruid: {
+            type: 'string',
+          },
         },
         additionalProperties: false,
       },
@@ -197,6 +330,18 @@ const registerContract = async function () {
             properties: [{ temp_timestamp: 'asc' }],
             unique: true,
           },
+          {
+            properties: [{ temp_unixtime_str: 'desc' }],
+            unique: false,
+          },
+          {
+            properties: [{ temp_unixtime_num: 'desc' }],
+            unique: false,
+          },
+          {
+            properties: [{ temp_unixtime_int: 'desc' }],
+            unique: false,
+          },
         ],
         properties: {
           reference: {
@@ -209,6 +354,18 @@ const registerContract = async function () {
             type: 'string',
           },
           temp_timestamp: {
+            type: 'string',
+          },
+          temp_unixtime_str: {
+            type: 'string',
+          },
+          temp_unixtime_num: {
+            type: 'number',
+          },
+          temp_unixtime_int: {
+            type: 'integer',
+          },
+          temp_vendoruid: {
             type: 'string',
           },
         },
