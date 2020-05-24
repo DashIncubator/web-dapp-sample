@@ -342,31 +342,32 @@
                 <div class="mdc-tab-scroller__scroll-content">
                   <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
                     <span class="mdc-tab__content">
-                      <span class="mdc-tab__text-label">Signup</span>
+                      <span class="mdc-tab__text-label">Tweet</span>
                     </span>
                     <span class="mdc-tab-indicator mdc-tab-indicator--active">
                       <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
                     </span>
                     <span class="mdc-tab__ripple"></span>
                   </button>
-                  <button class="mdc-tab mdc-tab" role="tab" aria-selected="true" tabindex="0">
+                  <button class="mdc-tab" role="tab" aria-selected="true" tabindex="1">
+                    <span class="mdc-tab__content">
+                      <span class="mdc-tab__text-label">Signup</span>
+                    </span>
+                    <span class="mdc-tab-indicator">
+                      <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                  </button>
+                  <button class="mdc-tab" role="tab" aria-selected="true" tabindex="2">
                     <span class="mdc-tab__content">
                       <span class="mdc-tab__text-label">Login</span>
                     </span>
-                    <span class="mdc-tab-indicator mdc-tab-indicator">
+                    <span class="mdc-tab-indicator">
                       <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
                     </span>
                     <span class="mdc-tab__ripple"></span>
                   </button>
-                  <button class="mdc-tab mdc-tab" role="tab" aria-selected="true" tabindex="0">
-                    <span class="mdc-tab__content">
-                      <span class="mdc-tab__text-label">Tweet</span>
-                    </span>
-                    <span class="mdc-tab-indicator mdc-tab-indicator">
-                      <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                    </span>
-                    <span class="mdc-tab__ripple"></span>
-                  </button>
+                  
                 </div>
               </div>
             </div>
@@ -414,42 +415,7 @@
 
               <!--end main form-->
               <!--tabbed content-->
-              <!--SIGNUP-->
-              <div class="content content--active">
-                <div>
-                  <button id="signup" class="mdc-theme-primary mdc-button  mdc-button--raised">
-                    <div class="mdc-button__ripple"></div>
-                    <span class="mdc-button__label">Sign Up</span>
-                  </button>
-                </div>
-
-                <br /><br />
-                <h2>Recent signups</h2>
-                <p>A list of signed up users</p>
-                <div>
-                  <button id="refresh-signups" class="mdc-theme-primary mdc-button">
-                    <div class="mdc-button__ripple"></div>
-                    <span class="mdc-button__label">Refresh</span>
-                  </button>
-                </div>
-                <br/>
-
-                <div id="signups" style="display: inline-block;text-align: left;">
-                    Loading...
-                </div>
-              </div>
-              <div class="content">
-                <!--LOGIN-->
-                <div>
-                  <button id="login" class="mdc-theme-primary mdc-button  mdc-button--raised">
-                    <div class="mdc-button__ripple"></div>
-                    <span class="mdc-button__label">Login</span>
-                  </button>
-                </div>
-                <br /><br />
-
-              </div>
-              <div class="content">
+              <div class="content  content--active">
                 <!--TWEET-->
                 <div>
                   <!--
@@ -494,6 +460,43 @@
                 <div id="tweets" style="display: inline-block;text-align: left;">Loading...</div>
                 
               </div>
+              
+              <!--SIGNUP-->
+              <div class="content">
+                <div>
+                  <button id="signup" class="mdc-theme-primary mdc-button  mdc-button--raised">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">Sign Up</span>
+                  </button>
+                </div>
+
+                <br /><br />
+                <h2>Recent signups</h2>
+                <p>A list of signed up users</p>
+                <div>
+                  <button id="refresh-signups" class="mdc-theme-primary mdc-button">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">Refresh</span>
+                  </button>
+                </div>
+                <br/>
+
+                <div id="signups" style="display: inline-block;text-align: left;">
+                    Loading...
+                </div>
+              </div>
+              <div class="content">
+                <!--LOGIN-->
+                <div>
+                  <button id="login" class="mdc-theme-primary mdc-button  mdc-button--raised">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">Login</span>
+                  </button>
+                </div>
+                <br /><br />
+
+              </div>
+              
               <!--output-->
               <div>
                 <pre></pre>
